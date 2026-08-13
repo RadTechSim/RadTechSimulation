@@ -1,8 +1,8 @@
 const members = [
-  {name:"นางสาวณัฐณิชาย์ แสงเพ็ชรรัตน์", role:"ผู้จัดทำโครงการ", label:"ผู้จัดทำ", image:"assets/member1.jpg"},
-  {name:"นางสาวพรลภัส สายเสมา", role:"ผู้จัดทำโครงการ", label:"ผู้จัดทำ", image:"assets/member2.jpg"},
-  {name:"นางสาวศรีอัปสร รัตฉวี", role:"ผู้จัดทำโครงการ", label:"ผู้จัดทำ", image:"assets/member3.jpg"},
-  {name:"ผู้ช่วยศาสตราจารย์ ดร.ฐิติพงศ์ แก้วเหล็ก", role:"อาจารย์ที่ปรึกษา", label:"อาจารย์ที่ปรึกษา", image:"assets/advisor.jpg"}
+  {name:"นางสาวณัฐณิชาย์ แสงเพ็ชรรัตน์", role:"ผู้จัดทำโครงการ", label:"ผู้จัดทำ", image:"member1.jpg"},
+  {name:"นางสาวพรลภัส สายเสมา", role:"ผู้จัดทำโครงการ", label:"ผู้จัดทำ", image:"member2.jpg"},
+  {name:"นางสาวศรีอัปสร รัตฉวี", role:"ผู้จัดทำโครงการ", label:"ผู้จัดทำ", image:"member3.jpg"},
+  {name:"ผู้ช่วยศาสตราจารย์ ดร.ฐิติพงศ์ แก้วเหล็ก", role:"อาจารย์ที่ปรึกษา", label:"อาจารย์ที่ปรึกษา", image:"advisor.jpg"}
 ];
 
 let currentMember=0;
