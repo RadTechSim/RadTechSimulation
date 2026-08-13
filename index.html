@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RADTECH SIMULATION</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top-header">
+  <button class="menu-button" onclick="toggleMenu()" aria-label="เปิดเมนู">☰</button>
+
+  <div class="header-title">
+    <strong>RADTECH SIMULATION</strong>
+  </div>
+
+  <a class="brand" href="#home" aria-label="RADTECH SIMULATION">
+    <img src="assets/logo.jpg" alt="RADTECH SIMULATION">
+  </a>
+
+  <nav id="mainNav">
+    <a href="#home">หน้าแรก</a>
+    <a href="#team">ผู้จัดทำ</a>
+    <a href="#ebook">คู่มือ</a>
+    <a href="#game">เข้าเกม</a>
+    <a href="#contact">ติดต่อ</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">Simulation GAME</p>
+    <h1>RADTECH<br><span>SIMULATION</span></h1>
+    <p class="hero-text">
+      จำลองการเป็นนักรังสีเทคนิค : การพัฒนาเกมสถานการณ์จำลอง 
+      สำหรับเรียนรู้ขั้นตอนการถ่ายภาพรังสีทรวงอกในห้องเอกซเรย์ทั่วไป
+    </p>
+    <div class="hero-buttons">
+      <a class="primary-button" href="#game">▶ เข้าสู่เกม</a>
+      <a class="outline-button" href="#ebook">📖 อ่านคู่มือ</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <img src="assets/logo.jpg" alt="RADTECH SIMULATION Logo">
+  </div>
+</section>
+
+<section id="team" class="section team-section">
+  <div class="section-heading">
+    <p>OUR TEAM</p>
+    <h2>คณะผู้จัดทำ</h2>
+    <span>ทีมพัฒนา RADTECH SIMULATION</span>
+  </div>
+
+  <div class="team-slider">
+    <button class="slider-arrow" onclick="changeMember(-1)" aria-label="ก่อนหน้า">‹</button>
+
+    <div class="member-card">
+      <div class="member-photo">
+        <img id="memberImage" src="assets/member1.jpg" alt="">
+      </div>
+      <div class="member-info">
+        <div class="member-number" id="memberNumber">01 / 04</div>
+        <div class="member-label" id="memberLabel">ผู้จัดทำ</div>
+        <h3 id="memberName">นางสาวณัฐณิชาย์ แสงเพ็ชรรัตน์</h3>
+        <p id="memberRole">ผู้จัดทำโครงการ</p>
+      </div>
+    </div>
+
+    <button class="slider-arrow" onclick="changeMember(1)" aria-label="ถัดไป">›</button>
+  </div>
+
+  <div class="dots" id="dots"></div>
+  <p class="slide-note">สไลด์เปลี่ยนอัตโนมัติ </p>
+</section>
+
+<section id="ebook" class="section ebook-section">
+  <div class="section-heading">
+    <p>GAME MANUAL</p>
+    <h2>คู่มือการเล่นเกม</h2>
+    <span>RADTECH SIMULATION E-book</span>
+  </div>
+
+  <div class="ebook-frame">
+    <iframe
+      allowfullscreen="allowfullscreen"
+      allow="autoplay; fullscreen; clipboard-write"
+      scrolling="no"
+      class="fp-iframe"
+      src="https://heyzine.com/flip-book/8b593a2b50.html"
+      title="RADTECH SIMULATION Game Manual">
+    </iframe>
+  </div>
+</section>
+
+<section id="game" class="game-section">
+  <div class="game-content">
+    <p>RADTECH SIMULATION</p>
+    <h2>กดเพื่อเริ่ม<br><span>เกม</span>สถานการณ์จำลอง </h2>
+    <p>
+      จำลองการเป็นนักรังสีเทคนิค : การพัฒนาเกมสถานการณ์จำลอง 
+      สำหรับเรียนรู้ขั้นตอนการถ่ายภาพรังสีทรวงอกในห้องเอกซเรย์ทั่วไป
+    </p>
+    <a class="game-button" href="https://radtechsimulation.itch.io/radtech-simulation" target="_blank" rel="noopener noreferrer">▶ PLAY GAME</a>
+    <div id="gameMessage"></div>
+  </div>
+
+  <div class="game-preview">
+    <div class="crosshair">+</div>
+    <div class="preview-text">
+      <strong>RADTECH</strong>
+      <span>SIMULATION</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contact">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="assets/logo.jpg" alt="RADTECH SIMULATION">
+      <div>
+        <strong>RADTECH SIMULATION</strong>
+        <span>Interactive Learning Game</span>
+      </div>
+    </div>
+
+    <div class="contact-area">
+      <h3>ช่องทางการติดต่อ</h3>
+      <div class="contact-links">
+        <a href="mailto:sriapsornr66@nu.ac.th">✉ Email: sriapsornr66@nu.ac.th</a>
+        <a href="mailto:pornlaphats66@nu.ac.th">✉ Email: pornlaphats66@nu.ac.th</a>
+        <a href="mailto:natnichasa66@nu.ac.th">✉ Email: natnichasa66@nu.ac.th</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 RADTECH SIMULATION</span>
+    <span>Radiological Technology</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
