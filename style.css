@@ -14,9 +14,9 @@ body{
 }
 
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 .top-header{
   height:78px;
@@ -31,7 +31,6 @@ body{
 
   background:rgba(255,255,255,.96);
   backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
 
   border-bottom:1px solid #e3e8ed;
 }
@@ -60,7 +59,7 @@ body{
 }
 
 
-/* โลโก้มุมขวา */
+/* Logo ขวา */
 
 .brand{
   justify-self:end;
@@ -75,9 +74,9 @@ body{
 }
 
 
-/* =========================
-   MENU BUTTON
-========================= */
+/* =====================================================
+   ปุ่ม MENU
+===================================================== */
 
 .menu-button{
   justify-self:start;
@@ -87,25 +86,20 @@ body{
   border:0;
   background:transparent;
 
-  color:#082a52;
-
   font-size:28px;
-  line-height:1;
+  color:#082a52;
 
   padding:8px;
 
   cursor:pointer;
 
   z-index:1100;
-
-  -webkit-appearance:none;
-  appearance:none;
 }
 
 
-/* =========================
-   NAVIGATION
-========================= */
+/* =====================================================
+   MENU DESKTOP
+===================================================== */
 
 nav{
   position:absolute;
@@ -114,7 +108,6 @@ nav{
   top:78px;
 
   display:none;
-
   flex-direction:column;
 
   gap:0;
@@ -125,7 +118,8 @@ nav{
 
   border-radius:0 0 12px 12px;
 
-  box-shadow:0 15px 35px rgba(12,45,74,.12);
+  box-shadow:
+    0 15px 35px rgba(12,45,74,.12);
 
   overflow:hidden;
 
@@ -144,8 +138,6 @@ nav a{
   color:#214665;
 
   font-weight:700;
-
-  white-space:nowrap;
 }
 
 nav a:hover{
@@ -154,9 +146,9 @@ nav a:hover{
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero{
   min-height:690px;
@@ -164,7 +156,6 @@ nav a:hover{
   padding:80px 9%;
 
   display:grid;
-
   grid-template-columns:1.05fr .95fr;
 
   gap:50px;
@@ -178,17 +169,16 @@ nav a:hover{
       #fff 55%,
       #eef5fa
     );
+
+  scroll-margin-top:80px;
 }
 
 .eyebrow,
 .section-heading p,
 .game-content>p:first-child{
   color:#0a77b5;
-
   font-size:13px;
-
   font-weight:900;
-
   letter-spacing:2px;
 }
 
@@ -217,11 +207,6 @@ nav a:hover{
 
   color:#60758b;
 }
-
-
-/* =========================
-   HERO BUTTONS
-========================= */
 
 .hero-buttons{
   display:flex;
@@ -253,7 +238,8 @@ nav a:hover{
 
   color:#fff;
 
-  box-shadow:0 12px 28px rgba(8,47,89,.2);
+  box-shadow:
+    0 12px 28px rgba(8,47,89,.2);
 
   border:0;
 }
@@ -266,19 +252,10 @@ nav a:hover{
   border:1px solid #9fb2c4;
 }
 
-.primary-button:hover,
-.game-button:hover{
-  background:#0a3d70;
-}
 
-.outline-button:hover{
-  background:#edf5fb;
-}
-
-
-/* =========================
+/* =====================================================
    HERO IMAGE
-========================= */
+===================================================== */
 
 .hero-visual{
   position:relative;
@@ -299,7 +276,8 @@ nav a:hover{
 
   border-radius:26px;
 
-  box-shadow:0 25px 70px rgba(15,46,78,.18);
+  box-shadow:
+    0 25px 70px rgba(15,46,78,.18);
 }
 
 .visual-caption{
@@ -323,12 +301,18 @@ nav a:hover{
 }
 
 
-/* =========================
-   GENERAL SECTION
-========================= */
+/* =====================================================
+   SECTION
+===================================================== */
 
 .section{
   padding:105px 9%;
+
+  scroll-margin-top:80px;
+}
+
+.team-section{
+  background:#fff;
 }
 
 .section-heading{
@@ -352,13 +336,9 @@ nav a:hover{
 }
 
 
-/* =========================
-   TEAM
-========================= */
-
-.team-section{
-  background:#fff;
-}
+/* =====================================================
+   TEAM SLIDER
+===================================================== */
 
 .team-slider{
   max-width:900px;
@@ -371,92 +351,45 @@ nav a:hover{
 
   align-items:center;
 
-  gap:18px;
-}
-
-
-/* การ์ดผู้จัดทำ */
-
-.member-card{
-  min-height:430px;
-
-  display:grid;
-
-  grid-template-columns:47% 53%;
-
-  overflow:hidden;
-
-  border-radius:24px;
-
-  background:#f4f8fb;
-
-  border:1px solid #dce5ed;
-
-  box-shadow:0 20px 55px rgba(18,52,82,.11);
-}
-
-
-/* =========================
-   TEAM / ผู้จัดทำ
-========================= */
-
-.team-section{
-  background:#fff;
-  scroll-margin-top:90px;
-}
-
-.section-heading{
-  text-align:center;
-  margin-bottom:45px;
-  padding-top:10px;
-}
-
-.section-heading h2{
-  margin:8px 0;
-  font-size:clamp(36px,5vw,58px);
-  letter-spacing:-2px;
-  color:#082a52;
-}
-
-.section-heading span{
-  color:#71859a;
-}
-
-
-/* กล่องสไลด์ */
-.team-slider{
-  max-width:900px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:55px 1fr 55px;
-  align-items:center;
   gap:18px;
 }
 
 
 /* การ์ด */
+
 .member-card{
   min-height:430px;
+
   display:grid;
+
   grid-template-columns:47% 53%;
+
   overflow:hidden;
+
   border-radius:24px;
+
   background:#f4f8fb;
+
   border:1px solid #dce5ed;
-  box-shadow:0 20px 55px rgba(18,52,82,.11);
+
+  box-shadow:
+    0 20px 55px rgba(18,52,82,.11);
 }
 
 
-/* =========================
+/* =====================================================
    รูปผู้จัดทำ
-========================= */
+===================================================== */
 
 .member-photo{
   min-height:430px;
+
   background:#e8eef3;
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 
   overflow:hidden;
@@ -465,190 +398,24 @@ nav a:hover{
 
 /*
    สำคัญ:
-   contain = แสดงรูปทั้งรูป
-   ไม่ตัดหัว ไม่ตัดตัว ไม่ตัดขอบรูป
+   ใช้ contain เพื่อไม่ตัดหัว/ตัว/ส่วนของรูป
 */
+
 .member-photo img{
   width:100%;
   height:100%;
 
   object-fit:contain;
+
   object-position:center;
 
   display:block;
 }
 
 
-/* ข้อมูล */
-.member-info{
-  padding:50px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.member-number{
-  font-size:13px;
-  color:#0a77b5;
-  font-weight:900;
-  letter-spacing:2px;
-}
-
-.member-label{
-  margin-top:25px;
-  color:#71859a;
-  font-size:14px;
-  font-weight:800;
-}
-
-.member-info h3{
-  margin:10px 0;
-  font-size:20px;
-  line-height:1.35;
-  color:#082a52;
-}
-
-.member-info p{
-  color:#667b90;
-  line-height:1.7;
-}
-
-
-/* ปุ่มซ้ายขวา */
-.slider-arrow{
-  width:52px;
-  height:52px;
-  border-radius:50%;
-  border:1px solid #b8c8d6;
-  background:#fff;
-  color:#082f59;
-  font-size:38px;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.slider-arrow:hover{
-  background:#082f59;
-  color:#fff;
-}
-
-
-/* จุดด้านล่าง */
-.dots{
-  display:flex;
-  justify-content:center;
-  gap:8px;
-  margin-top:25px;
-}
-
-.dot{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:#c7d3dd;
-  cursor:pointer;
-  transition:.25s;
-}
-
-.dot.active{
-  width:25px;
-  border-radius:10px;
-  background:#0a77b5;
-}
-
-.slide-note{
-  text-align:center;
-  color:#91a1b0;
-  font-size:12px;
-  margin-top:15px;
-}
-
-
-/* =========================
-   iPad / Mobile
-========================= */
-
-@media screen and (max-width:1024px){
-
-  .top-header{
-    height:68px;
-  }
-
-  .team-section{
-    scroll-margin-top:80px;
-  }
-
-  .section-heading{
-    padding-top:25px;
-  }
-
-  .team-slider{
-    grid-template-columns:40px 1fr 40px;
-    gap:7px;
-  }
-
-  .slider-arrow{
-    width:40px;
-    height:40px;
-    font-size:29px;
-  }
-
-  .member-card{
-    grid-template-columns:1fr;
-  }
-
-  /*
-     ให้พื้นที่รูปสูงพอ
-     และไม่บังคับให้รูปถูก crop
-  */
-  .member-photo{
-    min-height:360px;
-    height:360px;
-    max-height:none;
-  }
-
-  .member-photo img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-  }
-
-  .member-info{
-    padding:32px;
-  }
-
-  .member-info h3{
-    font-size:24px;
-  }
-}
-
-
-/* มือถือจอเล็ก */
-@media screen and (max-width:600px){
-
-  .section{
-    padding:70px 5%;
-  }
-
-  .section-heading{
-    padding-top:20px;
-  }
-
-  .member-photo{
-    height:320px;
-    min-height:320px;
-  }
-
-  .member-info{
-    padding:25px;
-  }
-
-}
-/* =========================
+/* =====================================================
    ข้อมูลผู้จัดทำ
-========================= */
+===================================================== */
 
 .member-info{
   padding:50px;
@@ -697,9 +464,9 @@ nav a:hover{
 }
 
 
-/* =========================
-   SLIDER ARROW
-========================= */
+/* =====================================================
+   ปุ่มเปลี่ยนคน
+===================================================== */
 
 .slider-arrow{
   width:52px;
@@ -717,12 +484,6 @@ nav a:hover{
   font-size:38px;
 
   cursor:pointer;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
 }
 
 .slider-arrow:hover{
@@ -732,9 +493,9 @@ nav a:hover{
 }
 
 
-/* =========================
-   DOTS
-========================= */
+/* =====================================================
+   DOT
+===================================================== */
 
 .dots{
   display:flex;
@@ -777,12 +538,14 @@ nav a:hover{
 }
 
 
-/* =========================
+/* =====================================================
    EBOOK
-========================= */
+===================================================== */
 
 .ebook-section{
   background:#eef4f8;
+
+  scroll-margin-top:80px;
 }
 
 .ebook-frame{
@@ -796,7 +559,8 @@ nav a:hover{
 
   border-radius:22px;
 
-  box-shadow:0 20px 60px rgba(12,45,74,.12);
+  box-shadow:
+    0 20px 60px rgba(12,45,74,.12);
 }
 
 .fp-iframe{
@@ -812,72 +576,9 @@ nav a:hover{
 }
 
 
-/* =========================
-   TEACHING PAGE
-========================= */
-
-.teaching-page{
-  min-height:calc(100vh - 78px);
-
-  padding:90px 7% 100px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #f5f9fc,
-      #fff 55%,
-      #eef5fa
-    );
-}
-
-.video-list{
-  max-width:1000px;
-
-  margin:0 auto;
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:40px;
-}
-
-.video-container{
-  width:100%;
-
-  max-width:900px;
-
-  margin:0 auto;
-
-  position:relative;
-
-  aspect-ratio:16 / 9;
-
-  background:#000;
-
-  border-radius:20px;
-
-  overflow:hidden;
-
-  box-shadow:0 20px 55px rgba(18,52,82,.15);
-}
-
-.video-container iframe{
-  position:absolute;
-
-  inset:0;
-
-  width:100%;
-
-  height:100%;
-
-  border:0;
-}
-
-
-/* =========================
+/* =====================================================
    GAME
-========================= */
+===================================================== */
 
 .game-section{
   min-height:680px;
@@ -895,6 +596,8 @@ nav a:hover{
   background:#082a52;
 
   color:#fff;
+
+  scroll-margin-top:80px;
 }
 
 .game-content h2{
@@ -936,11 +639,6 @@ nav a:hover{
 
   color:#9fc6e4;
 }
-
-
-/* =========================
-   GAME PREVIEW
-========================= */
 
 .game-preview{
   height:390px;
@@ -987,9 +685,9 @@ nav a:hover{
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
   padding:45px 8% 20px;
@@ -997,6 +695,8 @@ footer{
   background:#061b31;
 
   color:#dbe7f0;
+
+  scroll-margin-top:80px;
 }
 
 .footer-main{
@@ -1081,13 +781,15 @@ footer{
 }
 
 
-/* =========================================================
-   TABLET / iPAD
-========================================================= */
+/* =====================================================
+   iPad / TABLET / MOBILE
+===================================================== */
 
-@media screen and (max-width:1024px){
+@media screen and (max-width:1200px){
 
-  /* Header */
+  /* -----------------------------------------------
+     HEADER
+  ----------------------------------------------- */
 
   .top-header{
     height:68px;
@@ -1095,23 +797,23 @@ footer{
     padding:0 5%;
 
     grid-template-columns:1fr auto 1fr;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
   }
 
 
-  /* ปุ่มสามขีด */
+  /* -----------------------------------------------
+     ปุ่ม ☰
+  ----------------------------------------------- */
 
   .menu-button{
     display:block !important;
 
-    visibility:visible !important;
-
-    opacity:1 !important;
-
     justify-self:start;
-
-    width:48px;
-
-    height:48px;
 
     border:0;
 
@@ -1119,7 +821,7 @@ footer{
 
     color:#082a52;
 
-    font-size:28px;
+    font-size:30px;
 
     line-height:1;
 
@@ -1128,14 +830,27 @@ footer{
     cursor:pointer;
 
     z-index:1100;
-
-    -webkit-appearance:none;
-
-    appearance:none;
   }
 
 
-  /* โลโก้ */
+  /* -----------------------------------------------
+     ชื่อ RADTECH SIMULATION
+  ----------------------------------------------- */
+
+  .header-title{
+    justify-self:center;
+
+    text-align:center;
+  }
+
+  .header-title strong{
+    font-size:17px;
+  }
+
+
+  /* -----------------------------------------------
+     Logo ขวา
+  ----------------------------------------------- */
 
   .brand{
     justify-self:end;
@@ -1145,17 +860,19 @@ footer{
     width:46px;
 
     height:46px;
+
+    object-fit:cover;
+
+    border-radius:8px;
   }
 
 
-  /* ชื่อเว็บ */
-
-  .header-title strong{
-    font-size:17px;
-  }
-
-
-  /* เมนู iPad */
+  /* =================================================
+     MENU ☰
+     
+     สำคัญ:
+     เปิดจากด้านซ้ายใต้ปุ่ม ☰
+  ================================================= */
 
   nav{
     position:absolute;
@@ -1164,9 +881,9 @@ footer{
 
     left:5%;
 
-    right:5%;
+    right:auto;
 
-    width:auto;
+    width:230px;
 
     display:none;
 
@@ -1180,7 +897,8 @@ footer{
 
     border-radius:0 0 12px 12px;
 
-    box-shadow:0 15px 35px rgba(12,45,74,.12);
+    box-shadow:
+      0 15px 35px rgba(12,45,74,.15);
 
     overflow:hidden;
 
@@ -1192,6 +910,8 @@ footer{
   }
 
   nav a{
+    display:block;
+
     padding:16px 22px;
 
     text-decoration:none;
@@ -1214,11 +934,16 @@ footer{
   }
 
 
-  /* Hero */
+  /* -----------------------------------------------
+     HERO
+  ----------------------------------------------- */
+
+  .hero,
+  .game-section{
+    grid-template-columns:1fr;
+  }
 
   .hero{
-    grid-template-columns:1fr;
-
     padding-top:55px;
   }
 
@@ -1235,14 +960,18 @@ footer{
   }
 
 
-  /* Sections */
+  /* -----------------------------------------------
+     SECTION
+  ----------------------------------------------- */
 
   .section{
     padding:75px 7%;
   }
 
 
-  /* Team */
+  /* -----------------------------------------------
+     TEAM
+  ----------------------------------------------- */
 
   .team-slider{
     grid-template-columns:40px 1fr 40px;
@@ -1258,24 +987,26 @@ footer{
     font-size:29px;
   }
 
+
+  /* -----------------------------------------------
+     TEAM CARD
+  ----------------------------------------------- */
+
   .member-card{
     grid-template-columns:1fr;
-
-    min-height:0;
   }
 
 
-  /*
-    รูปผู้จัดทำบน iPad
-    เพิ่มพื้นที่ให้รูปแนวตั้ง
-  */
+  /* -----------------------------------------------
+     รูปผู้จัดทำบน iPad
+     
+     ใช้ contain เพื่อไม่ให้รูปถูกตัด
+  ----------------------------------------------- */
 
   .member-photo{
-    width:100%;
+    min-height:360px;
 
-    height:500px;
-
-    min-height:500px;
+    height:360px;
 
     max-height:none;
 
@@ -1297,9 +1028,15 @@ footer{
 
     object-fit:contain;
 
+    object-position:center;
+
     display:block;
   }
 
+
+  /* -----------------------------------------------
+     ข้อมูลผู้จัดทำ
+  ----------------------------------------------- */
 
   .member-info{
     padding:32px;
@@ -1310,125 +1047,94 @@ footer{
   }
 
 
-  /* E-book */
+  /* -----------------------------------------------
+     EBOOK
+  ----------------------------------------------- */
 
   .fp-iframe{
     height:520px;
   }
 
 
-  /* Teaching */
-
-  .teaching-page{
-    min-height:calc(100vh - 68px);
-
-    padding:70px 6% 80px;
-  }
-
-  .video-container{
-    max-width:900px;
-
-    border-radius:16px;
-  }
-
-
-  /* Game */
-
-  .game-section{
-    grid-template-columns:1fr;
-  }
+  /* -----------------------------------------------
+     GAME
+  ----------------------------------------------- */
 
   .game-preview{
     height:300px;
   }
 
 
-  /* Footer */
+  /* -----------------------------------------------
+     FOOTER
+  ----------------------------------------------- */
 
   .footer-bottom{
     flex-direction:column;
 
     gap:8px;
   }
+
 }
 
 
-/* =========================================================
-   MOBILE PHONE
-========================================================= */
+/* =====================================================
+   iPhone / จอเล็กมาก
+===================================================== */
 
 @media screen and (max-width:600px){
 
   .top-header{
-    padding:0 4%;
+    height:64px;
+  }
+
+  .menu-button{
+    font-size:27px;
+
+    padding:6px;
   }
 
   .header-title strong{
-    font-size:15px;
+    font-size:14px;
 
     letter-spacing:1px;
   }
 
   .brand img{
-    width:42px;
+    width:40px;
 
-    height:42px;
+    height:40px;
   }
 
 
-  /* Hero */
+  nav{
+    top:64px;
+
+    left:4%;
+
+    width:220px;
+  }
+
 
   .hero{
-    padding:45px 7% 65px;
+    padding:50px 7%;
   }
 
   .hero h1{
-    font-size:clamp(48px,15vw,75px);
+    font-size:clamp(48px,14vw,75px);
 
     letter-spacing:-3px;
   }
 
   .hero-text{
     font-size:16px;
-
-    line-height:1.8;
   }
 
-  .hero-buttons{
-    flex-direction:column;
-
-    align-items:stretch;
-  }
-
-  .primary-button,
-  .outline-button{
-    text-align:center;
-
-    width:100%;
-  }
-
-
-  /* Section */
-
-  .section{
-    padding:65px 6%;
-  }
-
-  .section-heading{
-    margin-bottom:30px;
-  }
-
-  .section-heading h2{
-    font-size:40px;
-  }
-
-
-  /* Team */
 
   .team-slider{
     grid-template-columns:35px 1fr 35px;
 
-    gap:4px;
+    gap:5px;
   }
 
   .slider-arrow{
@@ -1439,10 +1145,11 @@ footer{
     font-size:25px;
   }
 
-  .member-photo{
-    height:420px;
 
-    min-height:420px;
+  .member-photo{
+    height:320px;
+
+    min-height:320px;
   }
 
   .member-info{
@@ -1450,81 +1157,12 @@ footer{
   }
 
   .member-info h3{
-    font-size:21px;
+    font-size:20px;
   }
 
 
-  /* E-book */
-
-  .ebook-frame{
-    padding:8px;
-
-    border-radius:14px;
+  .section{
+    padding:60px 5%;
   }
 
-  .fp-iframe{
-    height:500px;
-
-    border-radius:8px;
-  }
-
-
-  /* Teaching */
-
-  .teaching-page{
-    padding:55px 5% 70px;
-  }
-
-  .video-container{
-    border-radius:12px;
-  }
-
-
-  /* Footer */
-
-  footer{
-    padding:40px 6% 20px;
-  }
-
-  .footer-main{
-    align-items:flex-start;
-
-    flex-direction:column;
-  }
-
-  .contact-links{
-    flex-direction:column;
-
-    gap:10px;
-  }
-}
-
-
-/* =========================================================
-   TOUCH DEVICES
-========================================================= */
-
-@media (hover:none) and (pointer:coarse){
-
-  .menu-button{
-    display:block !important;
-
-    visibility:visible !important;
-
-    opacity:1 !important;
-  }
-
-  nav a{
-    min-height:48px;
-
-    display:flex;
-
-    align-items:center;
-  }
-
-  .slider-arrow{
-    min-width:40px;
-
-    min-height:40px;
-  }
 }
