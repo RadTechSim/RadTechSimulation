@@ -38,7 +38,7 @@ function restartSlider(){
 }
 
 function toggleMenu(){
-  document.getElementById("mainNav").classList.toggle("open");
+ const nav = document.getElementById("mainNav").classList.toggle("open");
 }
 
 function startGame(){
