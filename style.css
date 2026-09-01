@@ -154,18 +154,13 @@ footer{padding:45px 8% 20px;background:#061b31;color:#dbe7f0}
     color:#0c75b8;
   }
 
-  .hero,
-  .game-section{
-    grid-template-columns:1fr;
-  }
+  
 
   .hero{
     padding-top:55px;
   }
 
-  .hero-visual{
-    order:-1;
-  }
+  
 
   .hero-visual img{
     width:min(330px,80vw);
