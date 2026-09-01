@@ -13,6 +13,7 @@ body{
   background:#fff;
 }
 
+
 /* =========================
    HEADER
 ========================= */
@@ -22,26 +23,21 @@ body{
   padding:0 5%;
   position:sticky;
   top:0;
-  z-index:100;
+  z-index:1000;
+
   display:grid;
   grid-template-columns:1fr auto 1fr;
   align-items:center;
+
   background:rgba(255,255,255,.96);
   backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+
   border-bottom:1px solid #e3e8ed;
 }
 
-.brand{
-  justify-self:end;
-  display:block;
-}
 
-.brand img{
-  width:55px;
-  height:55px;
-  object-fit:cover;
-  border-radius:8px;
-}
+/* ชื่อเว็บ */
 
 .header-title{
   text-align:center;
@@ -63,35 +59,77 @@ body{
   font-weight:900;
 }
 
-/* ปุ่มสามขีด */
+
+/* โลโก้มุมขวา */
+
+.brand{
+  justify-self:end;
+  display:block;
+}
+
+.brand img{
+  width:55px;
+  height:55px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+
+/* =========================
+   MENU BUTTON
+========================= */
+
 .menu-button{
   justify-self:start;
+
   display:none;
+
   border:0;
   background:transparent;
-  font-size:28px;
+
   color:#082a52;
+
+  font-size:28px;
+  line-height:1;
+
   padding:8px;
+
   cursor:pointer;
-  z-index:110;
+
+  z-index:1100;
+
   -webkit-appearance:none;
   appearance:none;
 }
 
-/* เมนู Desktop */
+
+/* =========================
+   NAVIGATION
+========================= */
+
 nav{
   position:absolute;
+
   right:7%;
   top:78px;
+
   display:none;
+
   flex-direction:column;
+
   gap:0;
+
   background:#fff;
+
   border:1px solid #dce5ec;
+
   border-radius:0 0 12px 12px;
+
   box-shadow:0 15px 35px rgba(12,45,74,.12);
+
   overflow:hidden;
-  z-index:105;
+
+  z-index:1050;
 }
 
 nav.open{
@@ -100,9 +138,13 @@ nav.open{
 
 nav a{
   padding:13px 22px;
+
   text-decoration:none;
+
   color:#214665;
+
   font-weight:700;
+
   white-space:nowrap;
 }
 
@@ -118,33 +160,47 @@ nav a:hover{
 
 .hero{
   min-height:690px;
+
   padding:80px 9%;
+
   display:grid;
+
   grid-template-columns:1.05fr .95fr;
+
   gap:50px;
+
   align-items:center;
-  background:linear-gradient(
-    135deg,
-    #f5f9fc,
-    #fff 55%,
-    #eef5fa
-  );
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5f9fc,
+      #fff 55%,
+      #eef5fa
+    );
 }
 
 .eyebrow,
 .section-heading p,
 .game-content>p:first-child{
   color:#0a77b5;
+
   font-size:13px;
+
   font-weight:900;
+
   letter-spacing:2px;
 }
 
 .hero h1{
   margin:15px 0;
+
   font-size:clamp(58px,8vw,105px);
+
   line-height:.86;
+
   letter-spacing:-5px;
+
   color:#082a52;
 }
 
@@ -154,15 +210,26 @@ nav a:hover{
 
 .hero-text{
   max-width:650px;
+
   font-size:19px;
+
   line-height:1.9;
+
   color:#60758b;
 }
 
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
 .hero-buttons{
   display:flex;
+
   gap:13px;
+
   flex-wrap:wrap;
+
   margin-top:25px;
 }
 
@@ -170,56 +237,94 @@ nav a:hover{
 .outline-button,
 .game-button{
   padding:15px 28px;
+
   border-radius:12px;
+
   text-decoration:none;
+
   font-weight:900;
+
   cursor:pointer;
 }
 
 .primary-button,
 .game-button{
   background:#082f59;
+
   color:#fff;
+
   box-shadow:0 12px 28px rgba(8,47,89,.2);
+
   border:0;
 }
 
 .outline-button{
   color:#082f59;
+
   background:#fff;
+
   border:1px solid #9fb2c4;
 }
 
+.primary-button:hover,
+.game-button:hover{
+  background:#0a3d70;
+}
+
+.outline-button:hover{
+  background:#edf5fb;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
 .hero-visual{
   position:relative;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 }
 
 .hero-visual img{
   width:min(470px,90%);
+
   aspect-ratio:1/1;
+
   object-fit:cover;
+
   border-radius:26px;
+
   box-shadow:0 25px 70px rgba(15,46,78,.18);
 }
 
 .visual-caption{
   position:absolute;
+
   bottom:25px;
+
   background:rgba(8,42,82,.9);
+
   color:#fff;
+
   padding:10px 18px;
+
   border-radius:999px;
+
   font-size:11px;
+
   font-weight:900;
+
   letter-spacing:2px;
 }
 
 
 /* =========================
-   SECTION
+   GENERAL SECTION
 ========================= */
 
 .section{
@@ -228,13 +333,17 @@ nav a:hover{
 
 .section-heading{
   text-align:center;
+
   margin-bottom:45px;
 }
 
 .section-heading h2{
   margin:8px 0;
+
   font-size:clamp(36px,5vw,58px);
+
   letter-spacing:-2px;
+
   color:#082a52;
 }
 
@@ -253,113 +362,202 @@ nav a:hover{
 
 .team-slider{
   max-width:900px;
+
   margin:auto;
+
   display:grid;
+
   grid-template-columns:55px 1fr 55px;
+
   align-items:center;
+
   gap:18px;
 }
 
+
+/* การ์ดผู้จัดทำ */
+
 .member-card{
   min-height:430px;
+
   display:grid;
+
   grid-template-columns:47% 53%;
+
   overflow:hidden;
+
   border-radius:24px;
+
   background:#f4f8fb;
+
   border:1px solid #dce5ed;
+
   box-shadow:0 20px 55px rgba(18,52,82,.11);
 }
 
+
+/* =========================
+   รูปผู้จัดทำ
+========================= */
+
 .member-photo{
   min-height:430px;
+
   background:#e8eef3;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   overflow:hidden;
 }
 
+
+/*
+  ใช้ contain เพื่อให้เห็นรูป "เต็มรูป"
+  ไม่ตัดหัว/ตัว/ขอบภาพ
+*/
+
 .member-photo img{
   width:100%;
+
   height:100%;
-  object-fit:cover;
+
+  object-fit:contain;
+
+  display:block;
 }
+
+
+/* =========================
+   ข้อมูลผู้จัดทำ
+========================= */
 
 .member-info{
   padding:50px;
+
   display:flex;
+
   flex-direction:column;
+
   justify-content:center;
 }
 
 .member-number{
   font-size:13px;
+
   color:#0a77b5;
+
   font-weight:900;
+
   letter-spacing:2px;
 }
 
 .member-label{
   margin-top:25px;
+
   color:#71859a;
+
   font-size:14px;
+
   font-weight:800;
 }
 
 .member-info h3{
   margin:10px 0;
+
   font-size:20px;
+
   line-height:1.35;
+
   color:#082a52;
 }
 
 .member-info p{
   color:#667b90;
+
   line-height:1.7;
 }
 
+
+/* =========================
+   SLIDER ARROW
+========================= */
+
 .slider-arrow{
   width:52px;
+
   height:52px;
+
   border-radius:50%;
+
   border:1px solid #b8c8d6;
+
   background:#fff;
+
   color:#082f59;
+
   font-size:38px;
+
   cursor:pointer;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
 }
 
 .slider-arrow:hover{
   background:#082f59;
+
   color:#fff;
 }
 
+
+/* =========================
+   DOTS
+========================= */
+
 .dots{
   display:flex;
+
   justify-content:center;
+
   gap:8px;
+
   margin-top:25px;
 }
 
 .dot{
   width:8px;
+
   height:8px;
+
   border-radius:50%;
+
   background:#c7d3dd;
+
   cursor:pointer;
 }
 
 .dot.active{
   width:25px;
+
   border-radius:10px;
+
   background:#0a77b5;
 }
 
 .slide-note{
   text-align:center;
+
   color:#91a1b0;
+
   font-size:12px;
+
   margin-top:15px;
 }
 
@@ -374,19 +572,91 @@ nav a:hover{
 
 .ebook-frame{
   max-width:1150px;
+
   margin:auto;
+
   background:#fff;
+
   padding:15px;
+
   border-radius:22px;
+
   box-shadow:0 20px 60px rgba(12,45,74,.12);
 }
 
 .fp-iframe{
   display:block;
+
   border:1px solid #dbe3ea;
+
   width:100%;
+
   height:650px;
+
   border-radius:12px;
+}
+
+
+/* =========================
+   TEACHING PAGE
+========================= */
+
+.teaching-page{
+  min-height:calc(100vh - 78px);
+
+  padding:90px 7% 100px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5f9fc,
+      #fff 55%,
+      #eef5fa
+    );
+}
+
+.video-list{
+  max-width:1000px;
+
+  margin:0 auto;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:40px;
+}
+
+.video-container{
+  width:100%;
+
+  max-width:900px;
+
+  margin:0 auto;
+
+  position:relative;
+
+  aspect-ratio:16 / 9;
+
+  background:#000;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  box-shadow:0 20px 55px rgba(18,52,82,.15);
+}
+
+.video-container iframe{
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+
+  height:100%;
+
+  border:0;
 }
 
 
@@ -396,18 +666,27 @@ nav a:hover{
 
 .game-section{
   min-height:680px;
+
   padding:100px 9%;
+
   display:grid;
+
   grid-template-columns:1fr;
+
   gap:75px;
+
   align-items:center;
+
   background:#082a52;
+
   color:#fff;
 }
 
 .game-content h2{
   font-size:clamp(42px,5vw,70px);
+
   line-height:1;
+
   letter-spacing:-3px;
 }
 
@@ -417,45 +696,67 @@ nav a:hover{
 
 .game-content>p:not(:first-child){
   max-width:650px;
+
   color:#c2d1df;
+
   font-size:18px;
+
   line-height:1.9;
 }
 
 .game-button{
   margin-top:15px;
+
   background:#fff;
+
   color:#082a52;
+
   font-size:17px;
 }
 
 #gameMessage{
   min-height:25px;
+
   margin-top:15px;
+
   color:#9fc6e4;
 }
 
+
+/* =========================
+   GAME PREVIEW
+========================= */
+
 .game-preview{
   height:390px;
+
   border-radius:25px;
+
   border:1px solid #456887;
-  background:radial-gradient(
-    circle at center,
-    #294d70,
-    #071f3b 65%
-  );
+
+  background:
+    radial-gradient(
+      circle at center,
+      #294d70,
+      #071f3b 65%
+    );
+
   display:none;
 }
 
 .crosshair{
   font-size:52px;
+
   opacity:.7;
 }
 
 .preview-text{
   position:absolute;
+
   bottom:35px;
+
   text-align:center;
+
   letter-spacing:3px;
 }
 
@@ -466,52 +767,8 @@ nav a:hover{
 
 .preview-text span{
   color:#9db8cf;
+
   font-size:12px;
-}
-
-
-/* =========================
-   TEACHING PAGE
-========================= */
-
-.teaching-page{
-  min-height:calc(100vh - 78px);
-  padding:90px 7% 110px;
-  background:linear-gradient(
-    135deg,
-    #f5f9fc,
-    #fff 55%,
-    #eef5fa
-  );
-}
-
-/* กล่องวิดีโอให้อยู่ตรงกลาง */
-.video-list{
-  width:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:35px;
-}
-
-.video-container{
-  width:100%;
-  max-width:900px;
-  margin:0 auto;
-  display:flex;
-  justify-content:center;
-  background:#fff;
-  padding:12px;
-  border-radius:20px;
-  box-shadow:0 20px 55px rgba(18,52,82,.12);
-}
-
-.video-container iframe{
-  display:block;
-  width:100%;
-  aspect-ratio:16/9;
-  border:0;
-  border-radius:12px;
 }
 
 
@@ -521,28 +778,39 @@ nav a:hover{
 
 footer{
   padding:45px 8% 20px;
+
   background:#061b31;
+
   color:#dbe7f0;
 }
 
 .footer-main{
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
+
   gap:40px;
+
   flex-wrap:wrap;
 }
 
 .footer-brand{
   display:flex;
+
   align-items:center;
+
   gap:14px;
 }
 
 .footer-brand img{
   width:52px;
+
   height:52px;
+
   object-fit:cover;
+
   border-radius:8px;
 }
 
@@ -553,7 +821,9 @@ footer{
 
 .footer-brand span{
   margin-top:5px;
+
   color:#8da5b9;
+
   font-size:13px;
 }
 
@@ -563,12 +833,15 @@ footer{
 
 .contact-links{
   display:flex;
+
   gap:20px;
+
   flex-wrap:wrap;
 }
 
 .contact-links a{
   color:#b8cada;
+
   text-decoration:none;
 }
 
@@ -578,90 +851,140 @@ footer{
 
 .footer-bottom{
   margin-top:35px;
+
   padding-top:18px;
+
   border-top:1px solid #203b54;
+
   display:flex;
+
   justify-content:space-between;
+
   color:#7890a6;
+
   font-size:12px;
 }
 
 
-/* ==================================================
-   TABLET / iPAD / MOBILE
-   <= 1024px
-================================================== */
+/* =========================================================
+   TABLET / iPAD
+========================================================= */
 
 @media screen and (max-width:1024px){
 
   /* Header */
+
   .top-header{
     height:68px;
+
     padding:0 5%;
+
     grid-template-columns:1fr auto 1fr;
   }
 
-  /* ☰ */
+
+  /* ปุ่มสามขีด */
+
   .menu-button{
     display:block !important;
+
     visibility:visible !important;
+
     opacity:1 !important;
+
     justify-self:start;
-    font-size:28px;
-    line-height:1;
-    padding:8px;
-    color:#082a52;
-    background:transparent;
+
+    width:48px;
+
+    height:48px;
+
     border:0;
+
+    background:transparent;
+
+    color:#082a52;
+
+    font-size:28px;
+
+    line-height:1;
+
+    padding:8px;
+
     cursor:pointer;
-    z-index:110;
+
+    z-index:1100;
+
+    -webkit-appearance:none;
+
+    appearance:none;
   }
 
-  /* ชื่อเกมยังอยู่ตรงกลาง */
-  .header-title{
-    justify-self:center;
-  }
 
-  .header-title strong{
-    font-size:17px;
-  }
+  /* โลโก้ */
 
-  /* Logo อยู่ด้านขวา */
   .brand{
     justify-self:end;
   }
 
   .brand img{
     width:46px;
+
     height:46px;
   }
 
-  /* เมนูที่เปิด */
+
+  /* ชื่อเว็บ */
+
+  .header-title strong{
+    font-size:17px;
+  }
+
+
+  /* เมนู iPad */
+
   nav{
     position:absolute;
+
     top:68px;
+
     left:5%;
+
     right:5%;
+
     width:auto;
+
     display:none;
+
     flex-direction:column;
+
     gap:0;
+
     background:#fff;
+
     border:1px solid #dce5ec;
+
     border-radius:0 0 12px 12px;
+
     box-shadow:0 15px 35px rgba(12,45,74,.12);
+
     overflow:hidden;
-    z-index:105;
+
+    z-index:1050;
   }
 
   nav.open{
-    display:flex !important;
+    display:flex;
   }
 
   nav a{
     padding:16px 22px;
+
+    text-decoration:none;
+
     color:#214665;
+
     font-weight:700;
+
     border-bottom:1px solid #edf1f4;
   }
 
@@ -671,13 +994,16 @@ footer{
 
   nav a:hover{
     background:#edf5fb;
+
     color:#0c75b8;
   }
 
 
   /* Hero */
+
   .hero{
     grid-template-columns:1fr;
+
     padding-top:55px;
   }
 
@@ -695,40 +1021,70 @@ footer{
 
 
   /* Sections */
+
   .section{
     padding:75px 7%;
   }
 
 
   /* Team */
+
   .team-slider{
     grid-template-columns:40px 1fr 40px;
+
     gap:7px;
   }
 
   .slider-arrow{
     width:40px;
+
     height:40px;
+
     font-size:29px;
   }
 
   .member-card{
     grid-template-columns:1fr;
+
     min-height:0;
   }
 
+
+  /*
+    รูปผู้จัดทำบน iPad
+    เพิ่มพื้นที่ให้รูปแนวตั้ง
+  */
+
   .member-photo{
-    height:300px;
-    min-height:300px;
-    max-height:300px;
+    width:100%;
+
+    height:500px;
+
+    min-height:500px;
+
+    max-height:none;
+
+    background:#e8eef3;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
     overflow:hidden;
   }
 
   .member-photo img{
     width:100%;
+
     height:100%;
-    object-fit:cover;
+
+    object-fit:contain;
+
+    display:block;
   }
+
 
   .member-info{
     padding:32px;
@@ -739,13 +1095,30 @@ footer{
   }
 
 
-  /* Ebook */
+  /* E-book */
+
   .fp-iframe{
     height:520px;
   }
 
 
+  /* Teaching */
+
+  .teaching-page{
+    min-height:calc(100vh - 68px);
+
+    padding:70px 6% 80px;
+  }
+
+  .video-container{
+    max-width:900px;
+
+    border-radius:16px;
+  }
+
+
   /* Game */
+
   .game-section{
     grid-template-columns:1fr;
   }
@@ -755,29 +1128,19 @@ footer{
   }
 
 
-  /* Teaching */
-  .teaching-page{
-    min-height:calc(100vh - 68px);
-    padding:70px 6% 90px;
-  }
-
-  .video-container{
-    max-width:850px;
-    padding:10px;
-  }
-
-
   /* Footer */
+
   .footer-bottom{
     flex-direction:column;
+
     gap:8px;
   }
 }
 
 
-/* ==================================================
-   SMALL MOBILE
-================================================== */
+/* =========================================================
+   MOBILE PHONE
+========================================================= */
 
 @media screen and (max-width:600px){
 
@@ -787,63 +1150,84 @@ footer{
 
   .header-title strong{
     font-size:15px;
-    letter-spacing:1px;
-  }
 
-  .menu-button{
-    font-size:25px;
+    letter-spacing:1px;
   }
 
   .brand img{
     width:42px;
+
     height:42px;
   }
 
-  nav{
-    left:4%;
-    right:4%;
-  }
+
+  /* Hero */
 
   .hero{
-    padding:45px 7%;
+    padding:45px 7% 65px;
   }
 
   .hero h1{
     font-size:clamp(48px,15vw,75px);
+
+    letter-spacing:-3px;
   }
 
   .hero-text{
     font-size:16px;
+
+    line-height:1.8;
   }
 
   .hero-buttons{
     flex-direction:column;
+
+    align-items:stretch;
   }
 
   .primary-button,
   .outline-button{
-    width:100%;
     text-align:center;
+
+    width:100%;
+  }
+
+
+  /* Section */
+
+  .section{
+    padding:65px 6%;
+  }
+
+  .section-heading{
+    margin-bottom:30px;
   }
 
   .section-heading h2{
-    font-size:38px;
+    font-size:40px;
   }
 
+
+  /* Team */
+
   .team-slider{
-    grid-template-columns:32px 1fr 32px;
+    grid-template-columns:35px 1fr 35px;
+
+    gap:4px;
   }
 
   .slider-arrow{
-    width:32px;
-    height:32px;
-    font-size:24px;
+    width:35px;
+
+    height:35px;
+
+    font-size:25px;
   }
 
   .member-photo{
-    height:250px;
-    min-height:250px;
-    max-height:250px;
+    height:420px;
+
+    min-height:420px;
   }
 
   .member-info{
@@ -851,33 +1235,81 @@ footer{
   }
 
   .member-info h3{
-    font-size:20px;
+    font-size:21px;
   }
+
+
+  /* E-book */
 
   .ebook-frame{
     padding:8px;
-    border-radius:15px;
+
+    border-radius:14px;
   }
 
   .fp-iframe{
-    height:450px;
+    height:500px;
+
+    border-radius:8px;
   }
+
+
+  /* Teaching */
 
   .teaching-page{
     padding:55px 5% 70px;
   }
 
   .video-container{
-    padding:7px;
-    border-radius:15px;
+    border-radius:12px;
   }
 
-  .video-container iframe{
-    border-radius:9px;
+
+  /* Footer */
+
+  footer{
+    padding:40px 6% 20px;
+  }
+
+  .footer-main{
+    align-items:flex-start;
+
+    flex-direction:column;
   }
 
   .contact-links{
     flex-direction:column;
+
     gap:10px;
+  }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover:none) and (pointer:coarse){
+
+  .menu-button{
+    display:block !important;
+
+    visibility:visible !important;
+
+    opacity:1 !important;
+  }
+
+  nav a{
+    min-height:48px;
+
+    display:flex;
+
+    align-items:center;
+  }
+
+  .slider-arrow{
+    min-width:40px;
+
+    min-height:40px;
   }
 }
