@@ -1302,3 +1302,1307 @@ footer{
     gap:8px;
   }
 }
+/* =========================================================
+   RADTECH SIMULATION
+   MAIN STYLE
+========================================================= */
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Noto Sans Thai",
+    sans-serif;
+  color:#102e4f;
+  background:#fff;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.top-header{
+  height:78px;
+  padding:0 5%;
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(14px);
+
+  border-bottom:1px solid #e3e8ed;
+}
+
+
+/* ☰ MENU BUTTON */
+
+.menu-button{
+  justify-self:start;
+
+  display:block !important;
+
+  border:0;
+  background:transparent;
+
+  color:#082a52;
+
+  font-size:28px;
+  line-height:1;
+
+  padding:8px;
+
+  cursor:pointer;
+
+  z-index:1100;
+}
+
+
+/* TITLE */
+
+.header-title{
+  justify-self:center;
+
+  text-align:center;
+
+  line-height:1.05;
+  letter-spacing:1.5px;
+}
+
+.header-title strong{
+  display:block;
+
+  color:#082a52;
+
+  font-size:22px;
+  font-weight:900;
+}
+
+
+/* HEADER LOGO */
+
+.brand{
+  justify-self:end;
+  display:block;
+}
+
+.brand img{
+  width:55px;
+  height:55px;
+
+  object-fit:cover;
+
+  border-radius:8px;
+}
+
+
+/* =========================================================
+   NAVIGATION MENU
+========================================================= */
+
+nav{
+  position:absolute;
+
+  top:78px;
+  left:5%;
+  right:auto;
+
+  display:none;
+
+  flex-direction:column;
+
+  min-width:230px;
+
+  background:#fff;
+
+  border:1px solid #dce5ec;
+
+  border-radius:0 0 12px 12px;
+
+  box-shadow:
+    0 15px 35px rgba(12,45,74,.12);
+
+  overflow:hidden;
+
+  z-index:1050;
+}
+
+nav.open{
+  display:flex;
+}
+
+nav a{
+  padding:15px 22px;
+
+  text-decoration:none;
+
+  color:#214665;
+
+  font-weight:700;
+
+  border-bottom:1px solid #edf1f4;
+
+  white-space:nowrap;
+}
+
+nav a:last-child{
+  border-bottom:none;
+}
+
+nav a:hover{
+  background:#edf5fb;
+  color:#0c75b8;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:690px;
+
+  padding:80px 9%;
+
+  display:grid;
+
+  grid-template-columns:1.05fr .95fr;
+
+  gap:50px;
+
+  align-items:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5f9fc,
+      #fff 55%,
+      #eef5fa
+    );
+}
+
+
+/* HERO TEXT */
+
+.eyebrow,
+.section-heading p,
+.game-content>p:first-child{
+  color:#0a77b5;
+
+  font-size:13px;
+
+  font-weight:900;
+
+  letter-spacing:2px;
+}
+
+.hero h1{
+  margin:15px 0;
+
+  font-size:clamp(58px,8vw,105px);
+
+  line-height:.86;
+
+  letter-spacing:-5px;
+
+  color:#082a52;
+}
+
+.hero h1 span{
+  color:#607b9a;
+}
+
+.hero-text{
+  max-width:650px;
+
+  font-size:19px;
+
+  line-height:1.9;
+
+  color:#60758b;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons{
+  display:flex;
+
+  gap:13px;
+
+  flex-wrap:wrap;
+
+  margin-top:25px;
+}
+
+.primary-button,
+.outline-button,
+.game-button{
+  padding:15px 28px;
+
+  border-radius:12px;
+
+  text-decoration:none;
+
+  font-weight:900;
+
+  cursor:pointer;
+}
+
+.primary-button,
+.game-button{
+  background:#082f59;
+
+  color:#fff;
+
+  box-shadow:
+    0 12px 28px rgba(8,47,89,.2);
+
+  border:0;
+}
+
+.outline-button{
+  color:#082f59;
+
+  background:#fff;
+
+  border:1px solid #9fb2c4;
+}
+
+.primary-button:hover,
+.game-button:hover{
+  opacity:.9;
+}
+
+.outline-button:hover{
+  background:#edf5fb;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-visual{
+  position:relative;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+}
+
+.hero-visual img{
+  width:min(470px,90%);
+
+  aspect-ratio:1/1;
+
+  object-fit:cover;
+
+  border-radius:26px;
+
+  box-shadow:
+    0 25px 70px rgba(15,46,78,.18);
+}
+
+.visual-caption{
+  position:absolute;
+
+  bottom:25px;
+
+  background:rgba(8,42,82,.9);
+
+  color:#fff;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  font-size:11px;
+
+  font-weight:900;
+
+  letter-spacing:2px;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.section{
+  padding:105px 9%;
+}
+
+.section-heading{
+  text-align:center;
+
+  margin-bottom:45px;
+}
+
+.section-heading h2{
+  margin:8px 0;
+
+  font-size:clamp(36px,5vw,58px);
+
+  letter-spacing:-2px;
+
+  color:#082a52;
+}
+
+.section-heading span{
+  color:#71859a;
+}
+
+
+/* =========================================================
+   TEAM
+========================================================= */
+
+.team-section{
+  background:#fff;
+}
+
+
+/* TEAM SLIDER */
+
+.team-slider{
+  max-width:1050px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:55px 1fr 55px;
+
+  align-items:center;
+
+  gap:18px;
+}
+
+
+/* MEMBER CARD */
+
+.member-card{
+  min-height:430px;
+
+  display:grid;
+
+  grid-template-columns:47% 53%;
+
+  overflow:hidden;
+
+  border-radius:24px;
+
+  background:#f4f8fb;
+
+  border:1px solid #dce5ed;
+
+  box-shadow:
+    0 20px 55px rgba(18,52,82,.11);
+}
+
+
+/* MEMBER PHOTO */
+
+.member-photo{
+  min-height:430px;
+
+  background:#e8eef3;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  overflow:hidden;
+}
+
+.member-photo img{
+  width:100%;
+  height:100%;
+
+  /*
+    contain = แสดงรูปเต็ม
+    ไม่ตัดหัว/ตัว/ขาออก
+  */
+  object-fit:contain;
+
+  object-position:center;
+}
+
+
+/* MEMBER INFORMATION */
+
+.member-info{
+  padding:50px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+}
+
+.member-number{
+  font-size:13px;
+
+  color:#0a77b5;
+
+  font-weight:900;
+
+  letter-spacing:2px;
+}
+
+.member-label{
+  margin-top:25px;
+
+  color:#71859a;
+
+  font-size:14px;
+
+  font-weight:800;
+}
+
+.member-info h3{
+  margin:10px 0;
+
+  font-size:20px;
+
+  line-height:1.35;
+
+  color:#082a52;
+}
+
+.member-info p{
+  color:#667b90;
+
+  line-height:1.7;
+}
+
+
+/* SLIDER ARROWS */
+
+.slider-arrow{
+  width:52px;
+  height:52px;
+
+  border-radius:50%;
+
+  border:1px solid #b8c8d6;
+
+  background:#fff;
+
+  color:#082f59;
+
+  font-size:38px;
+
+  cursor:pointer;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+}
+
+.slider-arrow:hover{
+  background:#082f59;
+
+  color:#fff;
+}
+
+
+/* DOTS */
+
+.dots{
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:8px;
+
+  margin-top:25px;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+
+  border-radius:50%;
+
+  background:#c7d3dd;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.dot.active{
+  width:25px;
+
+  border-radius:10px;
+
+  background:#0a77b5;
+}
+
+.slide-note{
+  text-align:center;
+
+  color:#91a1b0;
+
+  font-size:12px;
+
+  margin-top:15px;
+}
+
+
+/* =========================================================
+   E-BOOK
+========================================================= */
+
+.ebook-section{
+  background:#eef4f8;
+}
+
+.ebook-frame{
+  max-width:1150px;
+
+  margin:auto;
+
+  background:#fff;
+
+  padding:15px;
+
+  border-radius:22px;
+
+  box-shadow:
+    0 20px 60px rgba(12,45,74,.12);
+}
+
+.fp-iframe{
+  display:block;
+
+  border:1px solid #dbe3ea;
+
+  width:100%;
+
+  height:650px;
+
+  border-radius:12px;
+}
+
+
+/* =========================================================
+   TEACHING / LEARNING MEDIA PAGE
+========================================================= */
+
+.teaching-page{
+  min-height:calc(100vh - 78px);
+
+  padding:90px 7% 110px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5f9fc,
+      #fff 55%,
+      #eef5fa
+    );
+}
+
+
+/* VIDEO LIST */
+
+.video-list{
+  width:100%;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  flex-direction:column;
+
+  gap:30px;
+}
+
+
+/* VIDEO */
+
+.video-container{
+  width:min(900px,100%);
+
+  margin:0 auto;
+
+  background:#fff;
+
+  padding:15px;
+
+  border-radius:22px;
+
+  box-shadow:
+    0 20px 60px rgba(12,45,74,.12);
+}
+
+.video-container iframe{
+  display:block;
+
+  width:100%;
+
+  aspect-ratio:16 / 9;
+
+  height:auto;
+
+  border:0;
+
+  border-radius:12px;
+}
+
+
+/* =========================================================
+   GAME
+========================================================= */
+
+.game-section{
+  min-height:680px;
+
+  padding:100px 9%;
+
+  display:grid;
+
+  grid-template-columns:1fr;
+
+  gap:75px;
+
+  align-items:center;
+
+  background:#082a52;
+
+  color:#fff;
+}
+
+.game-content h2{
+  font-size:clamp(42px,5vw,70px);
+
+  line-height:1;
+
+  letter-spacing:-3px;
+}
+
+.game-content h2 span{
+  color:#8aa6c2;
+}
+
+.game-content>p:not(:first-child){
+  max-width:650px;
+
+  color:#c2d1df;
+
+  font-size:18px;
+
+  line-height:1.9;
+}
+
+.game-button{
+  display:inline-block;
+
+  margin-top:15px;
+
+  background:#fff;
+
+  color:#082a52;
+
+  font-size:17px;
+}
+
+#gameMessage{
+  min-height:25px;
+
+  margin-top:15px;
+
+  color:#9fc6e4;
+}
+
+
+/* GAME PREVIEW */
+
+.game-preview{
+  height:390px;
+
+  border-radius:25px;
+
+  border:1px solid #456887;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #294d70,
+      #071f3b 65%
+    );
+
+  display:none;
+}
+
+.crosshair{
+  font-size:52px;
+
+  opacity:.7;
+}
+
+.preview-text{
+  position:absolute;
+
+  bottom:35px;
+
+  text-align:center;
+
+  letter-spacing:3px;
+}
+
+.preview-text strong,
+.preview-text span{
+  display:block;
+}
+
+.preview-text span{
+  color:#9db8cf;
+
+  font-size:12px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  padding:45px 8% 20px;
+
+  background:#061b31;
+
+  color:#dbe7f0;
+}
+
+.footer-main{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:40px;
+
+  flex-wrap:wrap;
+}
+
+.footer-brand{
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+}
+
+.footer-brand img{
+  width:52px;
+  height:52px;
+
+  object-fit:cover;
+
+  border-radius:8px;
+}
+
+.footer-brand strong,
+.footer-brand span{
+  display:block;
+}
+
+.footer-brand span{
+  margin-top:5px;
+
+  color:#8da5b9;
+
+  font-size:13px;
+}
+
+.contact-area h3{
+  margin:0 0 13px;
+}
+
+.contact-links{
+  display:flex;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+}
+
+.contact-links a{
+  color:#b8cada;
+
+  text-decoration:none;
+}
+
+.contact-links a:hover{
+  color:#fff;
+}
+
+.footer-bottom{
+  margin-top:35px;
+
+  padding-top:18px;
+
+  border-top:1px solid #203b54;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  color:#7890a6;
+
+  font-size:12px;
+}
+
+
+/* =========================================================
+   iPAD / TABLET
+   601px - 1024px
+========================================================= */
+
+@media screen and (max-width:1024px){
+
+  /* HEADER */
+
+  .top-header{
+    height:68px;
+
+    padding:0 5%;
+
+    grid-template-columns:1fr auto 1fr;
+  }
+
+  .menu-button{
+    display:block !important;
+
+    visibility:visible !important;
+
+    opacity:1 !important;
+
+    font-size:28px;
+  }
+
+  .brand img{
+    width:46px;
+    height:46px;
+  }
+
+  .header-title strong{
+    font-size:17px;
+  }
+
+
+  /* MENU */
+
+  nav{
+    top:68px;
+
+    left:5%;
+    right:auto;
+
+    min-width:230px;
+  }
+
+  nav a{
+    padding:16px 22px;
+  }
+
+
+  /*
+    IMPORTANT:
+    iPad ยังให้ Hero อยู่ 2 คอลัมน์
+    เพื่อไม่ให้ Logo ใหญ่ไปอยู่ตรงกลาง
+  */
+
+  .hero{
+    min-height:auto;
+
+    padding:65px 7%;
+
+    grid-template-columns:1.05fr .95fr;
+
+    gap:30px;
+  }
+
+  .hero-content{
+    min-width:0;
+  }
+
+  .hero-visual{
+    order:initial;
+  }
+
+  .hero-visual img{
+    width:min(390px,100%);
+
+    border-radius:22px;
+  }
+
+  .hero h1{
+    font-size:clamp(48px,7vw,75px);
+
+    letter-spacing:-4px;
+  }
+
+  .hero-text{
+    font-size:17px;
+
+    line-height:1.8;
+  }
+
+
+  /* SECTION */
+
+  .section{
+    padding:75px 6%;
+  }
+
+
+  /*
+    iPad:
+    รูปซ้าย
+    ข้อมูลขวา
+  */
+
+  .team-slider{
+    grid-template-columns:45px 1fr 45px;
+
+    gap:10px;
+
+    max-width:1000px;
+  }
+
+  .member-card{
+    min-height:500px;
+
+    grid-template-columns:50% 50%;
+  }
+
+  .member-photo{
+    min-height:500px;
+  }
+
+  .member-photo img{
+    object-fit:contain;
+  }
+
+  .member-info{
+    padding:35px;
+  }
+
+  .member-info h3{
+    font-size:22px;
+  }
+
+  .slider-arrow{
+    width:42px;
+    height:42px;
+
+    font-size:30px;
+  }
+
+
+  /* EBOOK */
+
+  .fp-iframe{
+    height:520px;
+  }
+
+
+  /* TEACHING */
+
+  .teaching-page{
+    min-height:calc(100vh - 68px);
+
+    padding:65px 6% 90px;
+  }
+
+  .video-container{
+    width:min(850px,100%);
+  }
+
+
+  /* FOOTER */
+
+  .footer-bottom{
+    flex-direction:row;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 600px
+========================================================= */
+
+@media screen and (max-width:600px){
+
+  /* HEADER */
+
+  .top-header{
+    height:64px;
+
+    padding:0 4%;
+
+    grid-template-columns:1fr auto 1fr;
+  }
+
+  .menu-button{
+    font-size:25px;
+
+    padding:7px;
+  }
+
+  .header-title strong{
+    font-size:15px;
+
+    letter-spacing:1px;
+  }
+
+  .brand img{
+    width:42px;
+    height:42px;
+  }
+
+
+  /* MENU */
+
+  nav{
+    top:64px;
+
+    left:4%;
+
+    min-width:0;
+
+    width:92%;
+
+    border-radius:0 0 12px 12px;
+  }
+
+  nav a{
+    padding:15px 18px;
+
+    font-size:15px;
+  }
+
+
+  /* HERO */
+
+  .hero{
+    min-height:auto;
+
+    padding:45px 7% 65px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:35px;
+  }
+
+  .hero-visual{
+    order:-1;
+
+    width:100%;
+  }
+
+  .hero-visual img{
+    width:min(330px,85vw);
+
+    border-radius:20px;
+  }
+
+  .hero h1{
+    font-size:clamp(48px,15vw,75px);
+
+    letter-spacing:-3px;
+  }
+
+  .hero-text{
+    font-size:16px;
+
+    line-height:1.8;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+
+    align-items:stretch;
+  }
+
+  .primary-button,
+  .outline-button{
+    text-align:center;
+
+    width:100%;
+  }
+
+
+  /* SECTION */
+
+  .section{
+    padding:65px 6%;
+  }
+
+  .section-heading{
+    margin-bottom:30px;
+  }
+
+  .section-heading h2{
+    font-size:40px;
+  }
+
+
+  /* TEAM */
+
+  .team-slider{
+    grid-template-columns:38px 1fr 38px;
+
+    gap:5px;
+  }
+
+  /*
+    มือถือเล็ก:
+    เปลี่ยนเป็นรูปบน / ข้อมูลล่าง
+  */
+
+  .member-card{
+    min-height:auto;
+
+    grid-template-columns:1fr;
+  }
+
+  .member-photo{
+    min-height:330px;
+
+    height:330px;
+  }
+
+  .member-photo img{
+    object-fit:contain;
+  }
+
+  .member-info{
+    padding:28px 24px;
+  }
+
+  .member-info h3{
+    font-size:20px;
+  }
+
+  .member-label{
+    margin-top:0;
+  }
+
+  .slider-arrow{
+    width:36px;
+    height:36px;
+
+    font-size:27px;
+  }
+
+
+  /* EBOOK */
+
+  .ebook-frame{
+    padding:8px;
+
+    border-radius:15px;
+  }
+
+  .fp-iframe{
+    height:450px;
+
+    border-radius:8px;
+  }
+
+
+  /* TEACHING */
+
+  .teaching-page{
+    padding:50px 5% 70px;
+  }
+
+  .video-container{
+    padding:8px;
+
+    border-radius:15px;
+  }
+
+  .video-container iframe{
+    border-radius:8px;
+  }
+
+
+  /* GAME */
+
+  .game-section{
+    min-height:auto;
+
+    padding:70px 7%;
+  }
+
+  .game-content h2{
+    font-size:48px;
+  }
+
+  .game-content>p:not(:first-child){
+    font-size:16px;
+  }
+
+
+  /* FOOTER */
+
+  footer{
+    padding:40px 7% 20px;
+  }
+
+  .footer-main{
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+
+  .contact-links{
+    flex-direction:column;
+
+    gap:10px;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+
+    gap:8px;
+  }
+}
