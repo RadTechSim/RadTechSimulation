@@ -1166,3 +1166,86 @@ footer{
   }
 
 }
+/* =====================================================
+   FIX MENU POSITION - iPad
+   ===================================================== */
+
+@media screen and (max-width: 1200px) {
+
+  .top-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+  }
+
+  .menu-button {
+    display: block !important;
+    position: relative !important;
+    justify-self: start !important;
+    z-index: 2000 !important;
+  }
+
+  #mainNav {
+    position: absolute !important;
+
+    /* ให้เมนูอยู่ใต้ปุ่ม ☰ ฝั่งซ้าย */
+    left: 5% !important;
+    right: auto !important;
+
+    top: 68px !important;
+
+    width: 230px !important;
+
+    display: none !important;
+
+    flex-direction: column !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #dce5ec !important;
+
+    border-radius: 0 0 12px 12px !important;
+
+    box-shadow: 0 15px 35px rgba(12,45,74,.15) !important;
+
+    overflow: hidden !important;
+
+    z-index: 1999 !important;
+  }
+
+  #mainNav.open {
+    display: flex !important;
+  }
+
+  #mainNav a {
+    display: block !important;
+
+    width: 100% !important;
+
+    padding: 16px 22px !important;
+
+    color: #214665 !important;
+
+    background: #fff !important;
+
+    text-decoration: none !important;
+
+    font-weight: 700 !important;
+
+    border-bottom: 1px solid #edf1f4 !important;
+  }
+
+  #mainNav a:last-child {
+    border-bottom: none !important;
+  }
+
+  #mainNav a:hover {
+    background: #edf5fb !important;
+    color: #0c75b8 !important;
+  }
+
+}
