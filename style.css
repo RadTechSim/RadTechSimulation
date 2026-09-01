@@ -1249,3 +1249,114 @@ footer{
   }
 
 }
+/* =====================================================
+   FIX iPad CONTENT LAYOUT
+   เมนูเป็นแบบมือถือ แต่เนื้อหายังคงเป็นแบบเดิม
+===================================================== */
+
+@media screen and (min-width:851px) and (max-width:1200px){
+
+  /* =========================================
+     HERO
+     รูปอยู่ด้านขวา
+     ข้อความอยู่ด้านซ้าย
+  ========================================= */
+
+  .hero{
+    grid-template-columns:1.05fr .95fr !important;
+
+    gap:50px !important;
+
+    align-items:center !important;
+  }
+
+  .hero-visual{
+    order:initial !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+  }
+
+  .hero-visual img{
+    width:min(470px,90%) !important;
+
+    aspect-ratio:1/1 !important;
+
+    object-fit:cover !important;
+  }
+
+
+  /* =========================================
+     คณะผู้จัดทำ
+     รูปซ้าย + ข้อมูลขวา
+  ========================================= */
+
+  .team-slider{
+    grid-template-columns:40px 1fr 40px !important;
+
+    gap:7px !important;
+  }
+
+  .member-card{
+    grid-template-columns:47% 53% !important;
+
+    min-height:430px !important;
+  }
+
+
+  /* =========================================
+     รูปผู้จัดทำ
+  ========================================= */
+
+  .member-photo{
+    min-height:430px !important;
+
+    height:430px !important;
+
+    max-height:none !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    overflow:hidden !important;
+  }
+
+  .member-photo img{
+    width:100% !important;
+
+    height:100% !important;
+
+    object-fit:contain !important;
+
+    object-position:center !important;
+  }
+
+
+  /* =========================================
+     ข้อมูลผู้จัดทำ
+     ให้อยู่ข้างรูป
+  ========================================= */
+
+  .member-info{
+    padding:50px !important;
+
+    display:flex !important;
+
+    flex-direction:column !important;
+
+    justify-content:center !important;
+  }
+
+  .member-info h3{
+    font-size:20px !important;
+
+    line-height:1.35 !important;
+  }
+
+}
