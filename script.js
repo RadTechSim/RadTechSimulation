@@ -158,28 +158,20 @@ function changeMember(direction) {
 
 function restartSlider() {
 
-  /* หยุด timer เดิมก่อน */
-
-  if (slideTimer !== null) {
-
-    clearInterval(slideTimer);
-
-  }
-
-
-  /* เริ่ม timer ใหม่ */
+  clearInterval(slideTimer);
 
   slideTimer = setInterval(function () {
 
-    console.log("Auto slide");
+    currentMember++;
 
-    showMember(currentMember + 1);
+    if (currentMember >= members.length) {
+      currentMember = 0;
+    }
 
-  }, 5000);
+    showMember(currentMember);
 
+  }, 2000);
 }
-
-
 /* =========================================
    เมนู ☰
 ========================================= */
