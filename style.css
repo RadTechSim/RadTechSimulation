@@ -220,3 +220,16 @@ footer{padding:45px 8% 20px;background:#061b31;color:#dbe7f0}
     gap:8px;
   }
 }
+.video-container{
+  max-width:900px;
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
+}
+
+.video-container iframe{
+  width:100%;
+  aspect-ratio:16/9;
+  border:0;
+  border-radius:16px;
+}
